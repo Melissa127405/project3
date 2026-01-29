@@ -1,6 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React,{useState} from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 function Forms () {
@@ -17,6 +21,10 @@ function Forms () {
     
 
     return (
+
+      <Container>
+      <Row>
+        <Col>
         <form> 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Doodle's Name</Form.Label>
@@ -65,6 +73,10 @@ function Forms () {
         Submit
       </Button>
     </form> 
+</Col>
+      </Row>
+    </Container>
+
     )
 }
 
