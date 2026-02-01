@@ -39,14 +39,20 @@
 
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 20px;
 }
 
-.Homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+.Main {
+  padding: 20px;
+  border: 1px solid #b91dae;
+  border-radius: 4px;
+  background-color: #fe7dca;
+}
+
+.contactpage {
+  padding: 20px;
+  border: 1px solid #1967d2;
+  border-radius: 4px;
+  background-color: #7ed6ff;
 }

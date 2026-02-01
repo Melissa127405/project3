@@ -1,3 +1,4 @@
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -11,12 +12,32 @@ import Col from 'react-bootstrap/Col';
  
 
 function GroomPage () {
+const [items, setItems] = React.useState([
+  {id: 1, toDo: 'Option', ears: 'Square', tail: 'Fan', feet: 'Tight', body: 'Short', head: 'Full'},
+  {id: 2, toDo: 'Option', ears: 'Round', tail: 'Carrot', feet: 'Round', body: 'Long', head: 'Fusion'},
+  {id: 3, toDo: 'Option', ears: 'natural', tail: 'natural', feet: 'natural', body: 'natural', head: 'natural'}
+]);
+
+function handleDelete(event, naturalindex) {
+  console.log('Deleting item at index:', naturalindex);
+  console.log('New items:', items.filter((_, i) => i!== naturalindex));
+  const newItems = items.filter((_, i) => i!== naturalindex);
+  setItems(newItems);
+}
+
+function handleUpdate(event, naturalindex) {
+  console.log('Updating item at index:', naturalindex);
+  console.log('New items:', items.map((item, i) => i === naturalindex? {...item, [event.target.name]: event.target.value} : item));
+  const newItems = items.map((item, i) => i === naturalindex? {...item, [event.target.name]: event.target.value} : item);
+  setItems(newItems);
+}
+
 
     return (
        <Container>
       <Row>
         <Col>
-    <Table hover bordered  >
+    <Table striped hover bordered  >
       <thead>
         <tr>
           <th>To Do</th>
@@ -29,7 +50,7 @@ function GroomPage () {
       </thead>
       <tbody>
         <tr>
-          <td>Option</td>
+          <td>Option A</td>
           <td>square</td>
           <td>fan</td>
           <td>tight</td>
@@ -37,40 +58,38 @@ function GroomPage () {
           <td>full</td>
         </tr>
         <tr>
-          <td>Option</td>
-          <td>round</td>
+          <td>Option B</td>
+          <td>Round</td>
           <td>carrot</td>
-          <td>round</td>
-          <td>Long</td>
+          <td>messy</td>
+          <td>long</td>
           <td>fusion</td>
         </tr>
+         <tr>
+          <td>Option C</td>
+          <td>natural</td>
+          <td>natural</td>
+          <td>natural</td>
+          <td>natural</td>
+          <td>natural</td>
+        </tr>
+          </tbody>
+        <tfoot>  
+          <td>
+            <Button variant="dark" onClick={(event)=>handleDelete(event)}>Delete</Button>&nbsp;
+            <Button variant="Primary" onClick={(event)=>handleUpdate(event)}>Update</Button>
+          </td>
+        </tfoot>
         <tr>
         </tr>
-      </tbody>
+    
+
     </Table>
-    <ButtonToolbar className="mb-3" aria-label="Toolbar with Button groups">
-        <ButtonGroup className="me-2" aria-label="First group">
-          <Button variant="secondary">1</Button>
-          <Button variant="secondary">2</Button>
-          <Button variant="secondary">3</Button>
-          <Button variant="secondary">4</Button>
-          <Button variant="secondary">5</Button>
-        </ButtonGroup>
-        <InputGroup>
-          <InputGroup.Text id="btnGroupAddon">save</InputGroup.Text>
-          <Form.Control
-            type="text"
-            placeholder="Add # for natual option"
-            aria-label="Add # for natual option"
-            aria-describedby="btnGroupAddon"
-          />
-        </InputGroup>
-      </ButtonToolbar>
+   
    </Col>
       </Row>
     </Container>
     
-
     )
 }
 

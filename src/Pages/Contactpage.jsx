@@ -11,9 +11,10 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 
 function Contactpage () {
-     const [doodleName, setDoodleName] = React.useState({   doodleName: '',   doodleType: '',    firstLast: '',    contactEmail: ''    });
- 
-     function handleChange(event) {
+     // Declare a state variable for the doodle's name, type, first and last name, and email
+  const [doodleName, setDoodleName] = React.useState({   doodleName: '',   doodleType: '',    firstLast: '',    contactEmail: ''    });
+   
+   function handleChange(event) {
        setDoodleName({...doodleName, [event.target.name]: event.target.value });
        console.log (event.target.name);
      }
