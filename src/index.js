@@ -11,7 +11,7 @@ root.render(
   </React.StrictMode>
 );
 
-const newLocal = <script
+<script
   src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
   crossorigin></script>;
 

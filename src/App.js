@@ -1,6 +1,6 @@
 import './App.css';
-import React, {useState} from'react';
-import { BrowserRouter, Routes, Route } from "react-route-dom";
+import React , {useState} from'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './Components/Main';
 import Contactpage from './Pages/Contactpage';
