@@ -37,22 +37,95 @@
   }
 }
 
+body {
+  background-color: #1e96ff;
+}
+
+#root {
+  background-color: #accdea66;
+  min-height: 100vh;
+}
+
+.my-navbar {
+  background-color: #5b89c9;
+  color: rgb(252, 251, 251);
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: monospace;
+  border-radius: 5px;
+}
+
 .container {
   max-width: 600px;
   margin: 10px auto;
   padding: 20px;
 }
 
-.Main {
-  padding: 20px;
-  border: 1px solid #b91dae;
-  border-radius: 4px;
-  background-color: #fe7dca;
+.groom-flex {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem;
 }
 
-.contactpage {
-  padding: 20px;
-  border: 1px solid #1967d2;
-  border-radius: 4px;
-  background-color: #7ed6ff;
+.groom-flex h2{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #7aa2db;
+  font-family: monospace;
+
 }
+
+.groom-flex h3{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #3884ef;
+  font-family: monospace;
+
+}
+
+.table-responsive {
+   overflow-x: auto;
+   width: 100%;
+  
+}
+
+.table-shrink {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 0;
+}
+
+.table-shrink th,
+.table-shrink td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Homepage-title h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #448bef;
+  font-family: monospace;
+
+}
+
+.Homepage-title p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #75ceec;
+}
+
+.Homepage-title {
+  text-align: center;
+
+}
+

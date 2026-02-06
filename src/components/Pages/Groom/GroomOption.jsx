@@ -1,7 +1,7 @@
 import React from "react";
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function GroomOption({ options, setOptions }) {
 const [newOption, setNewOption] = React.useState({
   toDo: "Option",
@@ -42,8 +42,9 @@ function handleDelete(id) {
   }
 
   return (
-    <>
-      <Table striped bordered hover>
+  <>
+    <div className="table-responsive">
+      <Table striped bordered hover className="table-shrink">
         <thead>
           <tr>
             <th>Option</th>
@@ -55,7 +56,6 @@ function handleDelete(id) {
             <th>Delete</th>
           </tr>
         </thead>
-
         <tbody>
           {options.map(option => (
             <tr key={option.id}>
@@ -67,7 +67,7 @@ function handleDelete(id) {
               <td>{option.head}</td>
               <td>
                 <Button
-                  variant="danger"
+                  variant="light"
                   onClick={() => handleDelete(option.id)}
                 >
                   Delete
@@ -76,9 +76,8 @@ function handleDelete(id) {
             </tr>
           ))}
         </tbody>
-<tr>
-  <td>{newOption.toDo}</td>
-
+  <tr>
+    <td>{newOption.toDo}</td>
   <td>
     <input
       name="ears"
@@ -86,7 +85,6 @@ function handleDelete(id) {
       onChange={handleChange}
     />
   </td>
-
   <td>
     <input
       name="tail"
@@ -94,7 +92,6 @@ function handleDelete(id) {
       onChange={handleChange}
     />
   </td>
-
   <td>
     <input
       name="feet"
@@ -102,7 +99,6 @@ function handleDelete(id) {
       onChange={handleChange}
     />
   </td>
-
   <td>
     <input
       name="body"
@@ -110,7 +106,6 @@ function handleDelete(id) {
       onChange={handleChange}
     />
   </td>
-
   <td>
     <input
       name="head"
@@ -118,15 +113,15 @@ function handleDelete(id) {
       onChange={handleChange}
     />
   </td>
-
   <td>
-    <Button variant="success" onClick={handleAdd}>
+    <Button variant="dark" onClick={handleAdd}>
       Add
     </Button>
   </td>
 </tr>
      </Table>
-    </>
+    </div>
+  </>
   );
 }
 
