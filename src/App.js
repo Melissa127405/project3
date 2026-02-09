@@ -2,11 +2,11 @@ import './App.css';
 import React from'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header';
-import Main from './Components/Main';
-import Contactpage from './Components/Pages/Contactpage';
-import Groompage from './Components/Pages/Groompage';
-import Homepage from './Components/Homepage';
+import Header from './components/Header';
+import Main from './components/Main';
+import Contactpage from './components/Pages/Contactpage';
+import Groompage from './components/Pages/Groompage';
+import Homepage from './components/Homepage';
 
 function App() {
    return (
