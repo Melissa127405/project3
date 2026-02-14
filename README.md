@@ -22,6 +22,6 @@
   2. A way to schedule the appointment 
   3. Profiles of the stylists 
 
+# Wireframes
 
-
-
+![wireframe]('../project 3.drawio.png)
