@@ -24,4 +24,4 @@
 
 # Wireframes
 
-![wireframe]('../project 3.drawio.png)
+![wireframe](./src/components/assets/project%203.drawio.png) 
